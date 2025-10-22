@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-ag" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeeChapman.uk | Bespoke Digital Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#6366F1', // Indigo 500
+              'brand-secondary': '#818CF8', // Indigo 400
+              'dark-bg': '#0f172a', // Slate 900
+              'dark-card': '#1e293b', // Slate 800
+              'dark-text': '#e2e8f0', // Slate 200
+            },
+            animation: {
+              'fade-in': 'fadeIn 1s ease-in-out',
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'liquid-1': 'liquid 25s infinite',
+              'liquid-2': 'liquid 30s infinite',
+              'liquid-3': 'liquid 35s infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0 },
+                '100%': { opacity: 1 },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              liquid: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '25%': { transform: 'translate(40px, -60px) scale(1.1)' },
+                '50%': { transform: 'translate(-50px, 70px) scale(0.9)' },
+                '75%': { transform: 'translate(60px, 40px) scale(1.2)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569; 
+      }
+      /* Ensure root and body take full height */
+      body, #root {
+        min-height: 100vh;
+        background-color: #0f172a;
+      }
+      .masonry-container {
+        column-gap: 1.5rem; /* Corresponds to gap-6 */
+      }
+      @media (min-width: 768px) {
+        .masonry-container {
+          columns: 2;
+        }
+      }
+      @media (min-width: 1024px) {
+        .masonry-container {
+          columns: 3;
+        }
+      }
+      .masonry-item {
+        break-inside: avoid;
+        margin-bottom: 1.5rem; /* Corresponds to mb-6 */
+      }
+      .liquid-ether-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        touch-action: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.545.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "three": "https://aistudiocdn.com/three@0.166.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
