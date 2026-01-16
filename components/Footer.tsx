@@ -1,6 +1,15 @@
 
 import React from 'react';
-import { Github, Twitter, Linkedin } from 'lucide-react';
+import { Github, Twitter, Linkedin, Youtube, Instagram } from 'lucide-react';
+
+// TODO: Replace these placeholder URLs with your actual social media profiles
+const SOCIAL_LINKS = [
+  { name: 'YouTube', icon: Youtube, url: '#youtube' },      // e.g., https://youtube.com/@YourChannel
+  { name: 'Instagram', icon: Instagram, url: '#instagram' }, // e.g., https://instagram.com/yourhandle
+  { name: 'GitHub', icon: Github, url: '#github' },          // e.g., https://github.com/yourusername
+  { name: 'Twitter', icon: Twitter, url: '#twitter' },       // e.g., https://twitter.com/yourhandle
+  { name: 'LinkedIn', icon: Linkedin, url: '#linkedin' },    // e.g., https://linkedin.com/in/yourprofile
+];
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -15,15 +24,18 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="flex gap-4">
-            <a href="#" className="p-2 bg-white/5 rounded-full text-slate-400 hover:text-white hover:bg-brand-primary transition-all duration-300">
-              <Github size={20} />
-            </a>
-            <a href="#" className="p-2 bg-white/5 rounded-full text-slate-400 hover:text-white hover:bg-brand-primary transition-all duration-300">
-              <Twitter size={20} />
-            </a>
-            <a href="#" className="p-2 bg-white/5 rounded-full text-slate-400 hover:text-white hover:bg-brand-primary transition-all duration-300">
-              <Linkedin size={20} />
-            </a>
+            {SOCIAL_LINKS.map((social) => (
+              <a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.name}
+                className="p-2 bg-white/5 rounded-full text-slate-400 hover:text-white hover:bg-brand-primary transition-all duration-300"
+              >
+                <social.icon size={20} />
+              </a>
+            ))}
           </div>
         </div>
 

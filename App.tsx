@@ -4,8 +4,10 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
+import VideoSection from './components/video/VideoSection';
 import About from './components/About';
 import Process from './components/Process';
+import TestimonialsSection from './components/testimonials/TestimonialsSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LiquidEtherBackground from './components/LiquidEtherBackground';
@@ -21,8 +23,10 @@ const App: React.FC = () => {
           <Hero />
           <Services />
           <Portfolio />
+          <VideoSection />
           <About />
           <Process />
+          <TestimonialsSection />
           <Contact />
         </main>
         <Footer />

@@ -6,8 +6,9 @@ import { Code, Bot, Layout, Palette } from 'lucide-react';
 export const NAV_LINKS: NavLink[] = [
   { name: 'Services', href: '#services' },
   { name: 'Portfolio', href: '#portfolio' },
+  { name: 'Content', href: '#content' },
   { name: 'About', href: '#about' },
-  { name: 'Process', href: '#process' },
+  { name: 'Testimonials', href: '#testimonials' },
   { name: 'Contact', href: '#contact' },
 ];
 

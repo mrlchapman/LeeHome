@@ -38,3 +38,22 @@ export interface ContactFormData {
     email: string;
     message: string;
 }
+
+export interface YouTubeVideo {
+    id: string;
+    title: string;
+    description: string;
+    thumbnailUrl: string;
+    publishedAt?: string;
+}
+
+export interface Testimonial {
+    id: number;
+    clientName: string;
+    clientRole: string;
+    clientCompany: string;
+    clientAvatar?: string;
+    testimonial: string;
+    rating: 1 | 2 | 3 | 4 | 5;
+    projectId?: number;
+}
